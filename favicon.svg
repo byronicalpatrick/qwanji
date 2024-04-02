@@ -1,0 +1,8 @@
+<svg width="16" height="16" viewBox="0 0 100 100" xmlns="http://www.w3.org/2000/svg">
+    <path
+    fill="transparent"
+    stroke="#000000"
+    class="path"
+    d="M 5 10 C 0 0 -5 5 10 15C 5 0 10 5 15 10C 5 40 10 45 15 50C 65 80 70 85 75 90C 65 40 70 45 75 50C 65 0 70 5 75 10"
+    ></path>
+</svg>
