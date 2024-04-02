@@ -1,0 +1,72 @@
+body {
+    background-color: #393E46;
+    color: #EEEEEE;
+}
+
+h1 {
+    font-size: 30px;
+}
+
+svg {
+    width: 200px;
+    height: 200px;
+}
+
+input {
+    font-size: 20px;
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+}
+
+.row {
+    display: flex;
+    justify-content: center;
+}
+
+.sep {
+    margin: 2em 0;
+}
+
+.path {
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 1000;
+    animation: dash 8s linear forwards;
+}
+
+#qwanji > text {
+    animation: 5s opacity forwards;
+}
+
+#container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+@keyframes dash {
+    to {
+        stroke-dashoffset: 0;
+    }
+}
+
+@keyframes opacity {
+    to {
+        opacity:  0;
+    }
+}
+
+@media (width <= 700px) {
+    h1 {
+        font-size: 15vw;
+    }
+    svg {
+        width: 50vw;
+        height: 50vw;
+    }
+    input {
+        font-size: 6vw;
+    }
+}
