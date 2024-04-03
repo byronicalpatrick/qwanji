@@ -59,6 +59,9 @@ input {
 }
 
 @media (width <= 700px) {
+    body {
+        margin-bottom: 100vh;
+    }
     h1 {
         font-size: 15vw;
     }
