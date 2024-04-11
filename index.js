@@ -57,6 +57,14 @@ var STATE = [];
 const board = new Keyboard([5, 10]);
 const [boardWidth, boardHeight] = board.getDimensions();
 
+function getHash() {
+  return decodeURIComponent(window.location.hash).slice(1);
+}
+
+function setHash(value) {
+  window.location.hash = `#${value}`;
+}
+
 window.onload = () => {
   board.getLetters().forEach((letter) => {
     const [x, y] = board.getPosition(letter);
@@ -69,11 +77,17 @@ window.onload = () => {
     svg.appendChild(text);
   });
 
-  document.getElementById("input").addEventListener("input", onInputChange);
+  const initialValue = getHash();
+
+  input = document.getElementById("input");
+  input.addEventListener("input", onInputChange);
+  input.value = initialValue;
+  drawPhrase(initialValue);
 };
 
 function onInputChange(e) {
   drawPhrase(e.target.value);
+  setHash(e.target.value);
 }
 
 function drawWord(index, word) {
