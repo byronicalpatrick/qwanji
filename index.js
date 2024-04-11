@@ -62,7 +62,7 @@ function getHash() {
 }
 
 function setHash(value) {
-  window.location.hash = `#${value}`;
+  history.replaceState(null, null, `#${value}`);
 }
 
 window.onload = () => {
